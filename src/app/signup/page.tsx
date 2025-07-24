@@ -39,9 +39,13 @@ export default function SignUp() {
       }
       toast.success("Signup Successful");
       router.push("/login");
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("API error during signup:", error);
-    toast.error("Signup Failed: " + (error.response?.data?.message || "Please check your details"));
+    if (error && typeof error === "object" && "response" in error && error.response && typeof error.response === "object" && "data" in error.response && error.response.data && typeof error.response.data === "object" && "message" in error.response.data) {
+    toast.error("Signup Failed: " + (error.response.data.message || "Please check your details"));
+    } else {
+      toast.error("Signup Failed: Please check your details");
+    }
     // Optionally, set an error state here to display to the user
     console.error("Error details:", error);
   }

@@ -4,10 +4,11 @@ import toast from "react-hot-toast";
 import {useRouter} from "next/navigation"
 import React, { useState } from "react";
 import Link from "next/link";
+
 export default function ProfilePage() {
     const router = useRouter();
     const [data,setData] =useState("nothing")
-    const [querydata,setQueryData] = useState([])
+    const [querydata,setQueryData] = useState<string[]>([])
 
     const logout = async () => {
         try {

@@ -1,7 +1,7 @@
 "use client"; 
 import { useSearchParams } from "next/navigation";
 
-export default function userProfile({params}:any) {
+export default function UserProfile() {
     const searchParams = useSearchParams();
     const username= searchParams.get("username");
     const email = searchParams.get("email");

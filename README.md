@@ -1,3 +1,6 @@
+Next.js authentication app with email verification, user signup/login, and protected profile pages. Built using Next.js, MongoDB, Mongoose, and Tailwind CSS.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
